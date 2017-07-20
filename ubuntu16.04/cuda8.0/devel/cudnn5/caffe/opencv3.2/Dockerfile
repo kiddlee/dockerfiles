@@ -65,7 +65,6 @@ RUN apt-get install -y \
   libatlas-base-dev \
   libatlas-dev \
   libboost-all-dev \
-  libopencv-dev \
   libprotobuf-dev \
   libgoogle-glog-dev \
   libgflags-dev \
@@ -74,9 +73,7 @@ RUN apt-get install -y \
   libleveldb-dev \
   liblmdb-dev \
   libsnappy-dev \
-  python-dev \
-  python-pip \
-  python-numpy \
+  # python-numpy \
   gfortran > /dev/null
 
 
