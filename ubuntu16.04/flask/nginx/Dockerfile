@@ -3,10 +3,7 @@ MAINTAINER chenmingqiang <chenmingqiang86@gmail.com>
 
 RUN chmod 777 /tmp && apt-get update && apt-get install -y redis-server python-pip python-all python-all-dev python-dev nginx supervisor \
     automake bison flex libevent-dev libssl-dev libtool pkg-config telnet tree vim net-tools uwsgi wget && pip install --upgrade pip \
-    && pip install redis uwsgi requests flask pillow pycrypto opencv-python && pip install -v scikit-learn==0.18
-
-# build thrift 
-RUN wget http://archive.apache.org/dist/thrift/0.9.3/thrift-0.9.3.tar.gz && tar xzvf thrift-0.9.3.tar.gz && cd thrift-0.9.3 && ./configure && make install
+    && pip install redis uwsgi requests flask pillow pycrypto opencv-python 
 
 # install python thrift
 RUN pip install -v thrift==0.9.3
