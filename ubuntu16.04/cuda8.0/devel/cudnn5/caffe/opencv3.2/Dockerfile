@@ -99,3 +99,7 @@ ENV PATH=/root/caffe/build/tools:$PATH
 
 # Set ~/caffe as working directory
 WORKDIR /root/caffe
+
+RUN apt-get install -y supervisor
+
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

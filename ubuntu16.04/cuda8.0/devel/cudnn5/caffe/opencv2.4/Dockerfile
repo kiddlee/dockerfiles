@@ -56,6 +56,6 @@ ENV PATH=/root/caffe/build/tools:$PATH
 # Set ~/caffe as working directory
 WORKDIR /root/caffe
 
-RUN pip install -v scikit-learn==0.18  && apt-get install -y supervisor  && pip install opencv-python
+RUN pip install -v scikit-learn==0.18  && apt-get install -y supervisor  && pip install opencv-python pycrypto
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
