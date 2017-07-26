@@ -55,8 +55,10 @@ RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_NEW_PYTHON_SUPPORT=OFF \
     -D WITH_IPP=OFF \
     -D WITH_QT=OFF \
-    -D CUDA_CUDA_LIBRARY=/usr/local/cuda-8.0/targets/x86_64-linux/lib/stubs/libcuda.so \
+    -D BUILD_opencv_gpu=OFF \
+    -D WITH_CUDA=OFF \
     -D WITH_V4L=ON ..
+    #-D CUDA_CUDA_LIBRARY=/usr/local/cuda-8.0/targets/x86_64-linux/lib/stubs/libcuda.so \
 RUN make -j4 && make install && ldconfig
 RUN cd / && rm -rf /opencv /opencv_contrib
 
