@@ -38,7 +38,7 @@ RUN chmod 777 /tmp && apt-get update && apt-get install -y \
 WORKDIR /root
 RUN pip install -U pip && cd /root && git clone https://github.com/weiliu89/caffe.git && \
     cd caffe && git checkout ssd && cat python/requirements.txt | xargs -n1 pip install && \ 
-    pip install -v thrift==0.9.3 && apt-get install -y supervisor && pip install opencv-python
+    pip install -v thrift==0.9.3 pycrypto && apt-get install -y supervisor && pip install opencv-python
 
 RUN cd /root/caffe && \
 # Make and move into build directory
